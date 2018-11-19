@@ -1,0 +1,1 @@
+# sequelize-many-to-many
