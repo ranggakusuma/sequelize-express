@@ -1,0 +1,34 @@
+<%- include ../partials/header.ejs %>
+<div class="container">
+    <center>
+        <h1>
+            Add Subject to Student
+        </h1>
+    </center>
+    <table class="table table-striped table-hover">
+        <tr>
+            <td>First Name</td>
+            <td><%=student.firstName%></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><%=student.lastName%></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><%=student.email%></td>
+        </tr>
+    </table>
+    <form action="/student/<%=student.id%>/add-subject" method="POST">
+        <select class="custom-select" name="SubjectId">
+            <option selected>--Select One--</option>
+            <% for (let i = 0; i < subject.length; i++) { %>
+                <option value="<%=subject[i].id%>"><%=subject[i].subjectName%></option>
+            <% } %>
+        </select>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<%- include ../partials/footer.ejs %>

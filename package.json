@@ -1,0 +1,26 @@
+{
+  "name": "sequelize-many-to-many",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/young-fox-2018/sequelize-many-to-many.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/young-fox-2018/sequelize-many-to-many/issues"
+  },
+  "homepage": "https://github.com/young-fox-2018/sequelize-many-to-many#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "pg": "^7.6.1",
+    "sequelize": "^4.41.2"
+  }
+}

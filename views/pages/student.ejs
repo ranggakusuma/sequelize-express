@@ -1,0 +1,33 @@
+<%- include ../partials/header.ejs %>
+<div class="container">
+    <center>
+        <h1>
+            Add Student Data
+        </h1>
+        <a href="/student/add">Add Student</a>
+    </center>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Actions</th>
+            <th scope="col">Options</th>
+            </tr>
+        </thead>
+            <%for (let i = 0; i < data.length; i++) {%>
+                <tr>
+                    <td><%=data[i].id%></td>
+                    <td><%=data[i].firstName%></td>
+                    <td><%=data[i].lastName%></td>
+                    <td><%=data[i].email%></td>
+                    <td><a href="/student/<%=data[i].id%>/add-subject">Add Subject</a></td>
+                    <td><a href="/student/<%=data[i].id%>/edit">Edit</a> | <a href="/student/<%=data[i].id%>/delete" onclick="return confirm('Are you sure want to delete this data?')">Delete</a></td>
+                </tr>
+            <%}%>
+        </table>
+</div>
+<%- include ../partials/footer.ejs %>
